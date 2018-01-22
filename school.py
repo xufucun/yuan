@@ -75,16 +75,18 @@ def school_count(pro,url, name):
         # if div.get_text.
         if "所属地区" in div.get_text():
             school_city = div.get_text()
-            print(div.get_text())
+            # print(div.get_text())
         if "学校性质" in div.get_text():
-            print(div.get_text())
+            school_nature = div.get_text()
+            # print(div.get_text())
         if "招生电话" in div.get_text():
-            print(div.get_text())
+            school_tel = div.get_text()
+            # print(div.get_text())
         if "学校网址" in div.get_text():
             print(div.get_text())
         if "学校地址" in div.get_text():
             print(div.get_text())
-
+         # 不可行
     # TODO 解析全部信息
     # TODO 写入表格
 
