@@ -78,6 +78,8 @@ def wtxls(p, n, city, tel, adr, www):
     ws.write(cur_line, 4, www)
     # 另存为excel文件，并将文件命名
     new_excel.save(file_name)
+    # print("省份：" + city + "，当前数量" + cur_line + "，总数量：" + "")
+    # 省份 当前页数 总页数 当前数量 总数量
 
 
 # 使用BeautifulSoup解析
@@ -145,7 +147,7 @@ def province_school(pro, url):
     current_page = int(cur)
     all_pages = int(zys.get_text())
     # 开始循环
-    while current_page < all_pages:
+    while current_page <= all_pages:
         # print("当前页数:" + str(current_page))
         cur_url = (url + '&p=' + str(current_page)).replace(' ', '')
         # print(cur_url)
